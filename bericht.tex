@@ -1,0 +1,121 @@
+\documentclass[12pt]{article} % ein Artikel in 11-Punkt Schrift
+% wie man sich schon denkt leitet % einen Kommentar bis Zeilenende ein
+
+\usepackage[german]{babel} % deutsch, deutsche Rechtschreibung
+\usepackage[utf8]{inputenc} % Unicode Text 
+\usepackage[T1]{fontenc} % Umlaute und deutsches trennen
+\usepackage{mathptmx} % Times New Roman, gewohnter Font
+\usepackage{courier} % Schreibmaschinenfont schicker
+\usepackage[scaled=.95]{helvet} % was serifenloses wenn gebraucht
+\usepackage{graphicx} % wir wollen Bilder einfügen
+
+\usepackage{listings} % Schöne Quellcode-Listings
+\lstset{basicstyle=\sffamily, columns=[l]flexible, mathescape=true, 
+  showstringspaces=false, numbers=left, numberstyle=\tiny}
+\lstset{language=python} % und nur schöne Programmiersprachen ;-)
+% und eine eigene Umgebung für Listings
+\usepackage{float}
+\newfloat{listing}{htbp}{scl}[section]
+\floatname{listing}{Listing}
+
+% Auch wenn es anrüchig ist, man kann den Platz etwas mehr ausnützen
+\usepackage[paper=a4paper,width=14cm,left=35mm,height=22cm]{geometry}
+\usepackage{setspace}
+\linespread{1.25} % nicht ganz anderthalbzeilig, nur ein bisschen mehr Platz
+\setlength{\parskip}{0.5em} % kleiner Paragraphenabstand
+\setlength{\parindent}{0em} % im Deutschen Einrückung nicht üblich, leider
+
+% Seitenmarkierungen 
+\usepackage{fancyhdr} % Schickere Header und Footer
+\pagestyle{fancy}
+% Zeichensatz für Header/Footer
+\newcommand{\phv}{\fontfamily{phv}\fontseries{m}\fontsize{9}{11}\selectfont}
+\fancyhead[L]{\phv Praktikumsbericht} 
+\fancyhead[R]{\phv \thepage}
+\fancyfoot[L]{\phv Hochschule RheinMain}
+\fancyfoot[C]{\ } % keine Seitenzahl unten
+\fancyfoot[R]{\phv Medieninformatik}
+
+% Ein spezielles Paket zum Aufteilen des Literaturverzeichnisses
+% \usepackage{bibtopic}
+\usepackage{url} % wir wollen eine URL anzeigen
+
+\title{Exposé für eine Bachelorarbeit zum Thema:\newline 3D Echtzeit Datenvisualisierung von deutschlandweiten Luftreinheitsdaten}
+\author{Joshua Coelho Mestre}
+\date{\today} % oder \today für heute
+
+\begin{document}
+
+\maketitle
+% \begin{abstract}
+  % Exposé für eine Bachelorarbeit zum Thema: 3D Echtzeit Datenvisualisierung von Luftreinheitsdaten.
+% \end{abstract}
+\newpage
+\tableofcontents % das Inhaltsverzeichnis
+\newpage % neue Seite, muss bei einem Artikel eigentlich nicht sein
+
+\section{Problemstellung} \label{sec:Problemstellung}
+
+Wir leben in einer Zeit in der unteranderem durch die Diesel-Abgasaffäre das Thema Luftreinheit in unseren Städten in den Fokus der öffentlichen Aufmerksamkeit geraten ist.
+Obwohl das Thema in den letzten Jahren so präsent wie nie zuvor ist scheint es noch einige Bürger zu geben denen der Ernst der Lage noch nicht begriffen haben.
+
+Die Feinstaub- sowohl als auch die Stickoxid(NOx)-Belastung reizen vielerorts die Grenzwerte aus, dabei ist bekannt das eine hohe Feinstau-Belastung erhebliche gesundheitliche Risiken mit sich bringt.
+Die winzigen Partikel können ab einer kritischen Größe über die Atemwege direkt in die Blutbahn eindringen, was zu Folge hat, dass Menschen, die in besonders belasteten Regionen leben ein höheres Risiko haben an Schlaganfällen, Herzleiden und Atemwegserkrankungen zu erleiden.\cite{studie:1}
+
+Stickoxide reizen analog zu Feinstaub die Atemwege beim und lösen dadurch Entzündungen in Atemwegen und Lunge aus, wodurch vor allem Menschen betroffen sind die bereits an einer Lungen- oder Atemwegserkrankung leiden, da ihre Lungenfunktion zusätzlich eingeschränkt wird.
+
+\section{Forschungsstand} \label{sec:Forschungsstand}
+
+Zur zeit gibt es Visualisierungen von Stickstoff-Belastung in manchen Städten.
+Jedoch wird bei den Existenten-Visualisierungen oft nicht die gesamtdeutsche Situation beleuchtet und selbst wenn dies der Fall ist beschäftigen sich die Visualisierungen nur nebensächlich damit bei dem Betrachter eine Stimmung zu erzeugen, die zum Nachdenken anregt.
+
+\section{Zielsetzung und Erkenntnisinteresse} \label{sec:Zielsetzung}
+
+Ziel meiner Bachelorarbeit soll es sein dem Thema der Luftverschmutzung mehr Aufmerksamkeit zu verschaffen, indem sie die aktuellen Daten unter Berücksichtigung des zulässigen Grenzwerte visualisiert.
+
+Die Visualisierung soll, als Installation ausgestellt werden und zudem ein Bewusstsein für die aktuelle Lage der Situation in deutschen Städten schaffen und die Menschen dazu bewegen über eine mögliche Eigeninitiative nachzudenken.
+
+Das konkrete Ziel ist es sowohl die Stickoxid- als auch den Feinstaub"=Konzentration in eine Optische Relation mit ihrer Schädlichkeit zu setzen. Je schädlicher die gemessene Konzentrationen der Schadstoffe sind desto bedrohlicher soll die Visualisierung sich darstellen.
+
+Zusätzlich zu dem Stimmungserzeugenden Charakter der Visualisierung soll sie Interessierten über Interaktion mit der Visualisierung die Möglichkeit gegeben werden Auskunft über die genauen Messwerte und gegebenenfalls über die negativen Auswirkungen dieses Wertes geben.
+
+Es ist zu erwarten, dass die Visualisierung der aktuellen Messdaten in den Städten – vor allem in den Rushhours, ein negatives Bild zeichnen wird.
+Zudem wird eine Verdeutlichung der Reichweite des Problems indem die deutschlandweiten Messwerte dargestellt werden, die sich erwartungsgemäß durchweg sehr ähnlich sein werden.
+
+\section{Forschungskonzept} \label{sec:Forschungskonzept}
+
+In meiner Bachelorarbeit soll zu Generierung der Stimmung kritische Messwerte einer jeweiligen Messstelle deutlich durch dunkle schwarze Punkte dargestellt werden. Verändert sich der Messwert der Station zum Positiven soll der Punkt Heller werden um auf dem hellen Hintergrund weniger bedrohlich zu wirken.
+
+Da die Visualisierung nicht sofort als eine solche erkannt werden soll ist eine zunächst chaotische Bewegung der Kugeln erzeugt, die sich nach einem Bestimmten Auslöser geografisch korrekt anordnen und dann einem Interessierten Nutzer ermöglicht auf die Einzelnen Kugeln zu Klicken, wonach sich die Messdaten der zu der Kugel gehörigen offenbaren und ein zu den Informationen passender Text 
+
+Nach kurzer Zeit sollten die Informationen verschwinden und die Kugeln wieder ihre chaotische Teilchenbewegung übergehen bis zur nächsten Interaktion mit dem Nutzer.
+
+
+\section{Schwerpunkte und Herausforderungen} \label{sec:Schwerpunkte}
+
+Der Schwerpunkt der Arbeit soll darin liegen Ästhetik, die die Stimmung des Bildes erzeugt und Information in einer Installation unterzubringen.
+
+Eine Herausforderung bei der Umsetzung wird sein die Interaktion und die Präsentation der Messdaten für die gewählte Messstation so zu modellieren, dass der "creative coding" Aspekt an dem Projekt nicht verloren geht.  
+
+
+% % Listen, wenn überhaupt!, bitte ans Ende und nicht an den Anfang
+% \listoffigures % Liste der Abbildungen 
+% \listoftables % Liste der Tabellen
+% % Als letztes noch das Literaturverzeichnis
+\bibliographystyle{ieeetr} % mit url
+% so wäre es ganz einfach!
+\bibliography{bericht}
+% % dann mit "bibtex ausarb" bibtexen und das Literaturverzeichnis ist da
+% % z.B. mit bibtopic kann man die Quellen sauber trennen
+% \begin{btSect}{ausarb}
+% \section*{Literaturverzeichnis}
+% \btPrintCited
+% \end{btSect}
+% \begin{btSect}{online}
+% \section*{Online-Quellen}
+% \btPrintCited
+% \end{btSect}
+% % dann mit "bibtex ausarb1" und "bibtex ausarb2" arbeiten.
+% % Wir verwenden ausarb<i> weil die Dokumenten-Datei ausarb.tex ist.
+
+\end{document}

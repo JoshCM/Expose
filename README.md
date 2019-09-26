@@ -1,2 +1,2 @@
-# Expos-
+# Expose
 Exposé für die Bachelorarbeit
