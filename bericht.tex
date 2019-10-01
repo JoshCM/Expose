@@ -40,7 +40,7 @@
 % \usepackage{bibtopic}
 \usepackage{url} % wir wollen eine URL anzeigen
 
-\title{Exposé für eine Bachelorarbeit zum Thema:\newline 3D Echtzeit Datenvisualisierung von deutschlandweiten Luftreinheitsdaten}
+\title{Exposé für eine Bachelorarbeit zum Thema:\newline Interaktive 3D Echtzeitvisualisierung von Luftreinheitsdaten}
 \author{Joshua Coelho Mestre}
 \date{\today} % oder \today für heute
 
@@ -59,54 +59,62 @@
 Wir leben in einer Zeit in der unteranderem durch Skandale wie die Diesel"=Abgasaffäre das Thema Luftreinheit in unseren Städten in den Fokus der öffentlichen Aufmerksamkeit gerückt ist.
 Obwohl das Thema in den letzten Jahren so präsent wie nie zuvor ist scheint es noch einige Menschen zu geben denen der Ernst der Lage noch nicht bewusst ist.
 
-Sowohl die Feinstaub"= als auch die Stickoxid(NOx)-Belastungen in deutschen Innenstädten reizen vielerorts die gesetzlichen und gesundheitlich zumutbaren Grenzewerte aus. Und das obwohl bekannt ist, dass eine hohe Feinstau-Belastung erhebliche gesundheitliche Risiken mit sich bringt.
+Sowohl die Feinstaub"= als auch die Stickoxid (NOx)-Belastungen in deutschen Innenstädten reizen vielerorts die gesetzlichen und gesundheitlich zumutbaren Grenzewerte aus. Und das obwohl bekannt ist, dass eine hohe Feinstau-Belastung erhebliche gesundheitliche Risiken mit sich bringt.
 
 Die winzigen Partikel können ab einer kritischen Größe über die Atemwege direkt in die menschliche Blutbahn eindringen, was zu Folge hat, dass Menschen, die in besonders belasteten Regionen leben ein höheres Risiko haben an Schlaganfällen, Herzleiden und Atemwegserkrankungen zu erleiden.
 
-Stickoxide reizen analog zu Feinstaub die Atemwege beim und lösen dadurch Entzündungen in Atemwegen und Lunge aus, wodurch vor allem Menschen betroffen sind die bereits an einer Lungen- oder Atemwegserkrankung leiden, da ihre Lungenfunktion zusätzlich eingeschränkt wird.\cite{zo:StickoxideUndFeinstaub}
+Stickoxide reizen analog zu Feinstaub die Atemwege beim und lösen dadurch Entzündungen in Atemwegen und Lunge aus, wodurch vor allem Menschen betroffen sind die bereits an einer Lungen- oder Atemwegserkrankung leiden, da ihre Lungenfunktion zusätzlich eingeschränkt wird\cite{zo:StickoxideUndFeinstaub}.
 
 \section{Forschungsstand} \label{sec:Forschungsstand}
 
-Zur zeit gibt es bereits Visualisierungen von Stickstoff-Belastung in manchen Städten. 
+Zur Zeit gibt es bereits Visualisierungen von Stickstoff-Belastung in manchen Städten. 
 Allerdings wird bei den zur Zeit existierenden Visualisierungen oft nicht die gesamtdeutsche Situation beleuchtet.
-Und selbst wenn dies der Fall ist beschränken sich die Visualisierungen auf die reine Darstellung der Messdaten und nur oberfächlich, wenn überhaupt, damit bei dem Betrachter eine Stimmung zu erzeugen, die zum Nachdenken anregt.
+Und selbst wenn dies der Fall ist beschränken sich die Visualisierungen auf die reine Darstellung der Messdaten und nur oberflächlich, wenn überhaupt, damit bei dem Betrachter eine Stimmung zu erzeugen, die zum Nachdenken anregt.
 
 \section{Zielsetzung und Erkenntnisinteresse} \label{sec:Zielsetzung}
 
-Ziel meiner Bachelorarbeit soll es sein dem Thema der Luftverschmutzung mehr Aufmerksamkeit zu verschaffen, indem sie die aktuellen Daten unter Berücksichtigung des gesundheitlich vertretbaren Grenzwerte visualisiert.
+Ziel dieser Bachelorarbeit soll es sein dem Thema der Luftverschmutzung mehr Aufmerksamkeit zu verschaffen, indem sie die aktuellen Daten unter Berücksichtigung des gesundheitlich vertretbaren Grenzwerte visualisiert.
 
 Die Visualisierung soll, als Installation ausgestellt werden können und in dieser Rolle ein Bewusstsein für die aktuelle Lage der Situation in deutschen Städten schaffen.
-Sie soll dem Betrachter die aktuelle Lage verdeutlichen und ihn im Optimal"=Fall dazu bewegen über eine mögliche Eigeninitiative nachzudenken.
+Sie soll dem Betrachter die aktuelle Lage verdeutlichen und ihn im Falle bedenklicher Messwerte dazu bewegen über eine mögliche Eigeninitiative nachzudenken.
 
 Das konkrete Ziel ist es sowohl die Stickoxid"= als auch den Feinstaub"=Konzentration in eine optische Relation zu ihrer Schädlichkeit zu setzen. 
 Je schädlicher die gemessene Konzentrationen der Schadstoffe sind desto bedrohlicher soll die Visualisierung der Messdaten sich darstellen.
 
 Zusätzlich zu dem stimmungserzeugenden Charakter der Visualisierung soll interessierten Nutzern über eine Interaktion mit der Visualisierung die Möglichkeit gegeben werden, Auskunft über die genauen Messwerte und gegebenenfalls über die negativen gesundheitlichen Folgen dieses Wertes geben.
 
-Es ist zu erwarten, dass die Visualisierung der aktuellen Messdaten in den Städten – vor allem in den Rushhours, ein negatives Bild zeichnen wird.
-Zudem wird eine Verdeutlichung des Ausmaßes und der Reichweite des Problems der zu hohen Feinstaub"= und Stickoxid"=Belastungen in deutschen Städten erwartet, indem die deutschlandweiten Messwerte dargestellt werden, die erwartungsgemäß ähnlich problematisch ausfallen werden.
-
 \section{Forschungskonzept} \label{sec:Forschungskonzept}
+Im Rahmen dieser Bachelorarbeit sollen alle verfügbaren Messstationen in Deutschland durch jeweils eine Kugel repräsentiert werden.
 
-In der Bachelorarbeit sollen alle verfügbaren Messstationen in Deutschland durch jeweils eine, zunächst helle und leicht transparente, Kugel repräsentiert werden.
-Misst eine Messstation nun eine grenzwertüberschreitende Schadstoffbelastung so soll sich die entsprechende Kugel in der Visualisierung dunkel einfärben und ihre Transparenz verlieren.
-   
-Verändert sich der Messwert der Station hingegen zum Positiven soll die zur Messstation gehörende Kugel heller und entsprechend der Messdaten auch wieder transparenter färben um auf dem hellen Hintergrund weniger bedrohlich zu wirken und damit zu einer positiveren Gesamtstimmung in der Visualisierung beizutragen.
+Die Farbe und Transparenz der Kugeln richten sich nach den, an der jeweiligen Messstation gemessenen Daten.
+Um den stimmungsgenerierenden Effekt der Visualisierung zu erhalten, wird für einen positiven Messwert, der sich weit unterhalb des Grenzwertes befindet, eine helle beruhigende Farbe und eine hohe Transparenz gewählt.
 
-Da die Visualisierung nicht sofort als eine solche erkannt werden soll wird eine zunächst chaotische Bewegung der Kugeln erzeugt.
-Die Kugel sollen sich jedoch nach einer Interaktion mit dem Nutzer entsprechend der geografischen Lage der Messstation korrekt anordnen und Nutzer darauf hin durch ein Klick auf eine Kugel ermöglichen, die Messdaten der zu der Kugel gehörigen Messstation einzusehen und sie in Relation zu den zulässigen Grenzwerten setzt.
+Je näher der gemessene Wert dem Grenzwert kommt, desto mehr soll sich die Farbe in eine dunkle und bedrohliche Farbe verändern. Gleichzeitig und analog zur Farbänderung, soll die Transparenz der Kugel abnehmen, je mehr sich die Messdaten dem Grenzwert nähern.
 
-Nach der Interaktion mit dem Nutzer sollten die Kugel wieder in die chaotische Bewegung übergehen und auf eine erneute Interaktion warten.
+Bei einer deutlichen Überschreitung des Grenzwertes, soll sich die Kugel komplett schwarz färben und ihre Transparenz gänzlich verlieren, was dazu beiträgt, die Stimmung der Visualisierung bedrohlich wirken zu lassen.
+
+Da die Visualisierung nicht sofort als eine solche erkannt werden soll, wird eine zunächst chaotische Bewegung der Kugeln erzeugt.
+Mittels eines Ultraschall-Sensors wird ermittelt, ob ein Nutzer physisch vor der Visualisierung steht und diese betrachtet.
+
+In diesem Fall sollen sich die Kugeln entsprechend der geografischen Lage der jeweiligen Messstation korrekt anordnen.
+Dem Nutzer soll es daraufhin ermöglicht werden, durch einen Klick auf eine der Kugel, die Messdaten der zugehörigen Messstation einzusehen.
+
+Nachdem sich der Nutzer wieder physisch von der Visualisierung entfernt hat, sollen die Kugeln bis zur nächsten Interaktion wieder in den chaotischen Bewegungszustand gehen.  
+
+Das Konzept soll mithilfe eines Raspberry Pi, der sich hinter einem Bildschirm befindet, realisiert werden.
+Zusätzlich soll dieser mit dem oben erwähnten Ultraschall-Abstands-Sensor ausgestattet sein. 
+
 
 \section{Schwerpunkte und Herausforderungen} \label{sec:Schwerpunkte}
 
-Der Schwerpunkt der Arbeit soll darin liegen eine Ästhetik zu erzeugen, die die Stimmung des Bildes erzeugt und gleichzeitig die Information über die aktuelle Schadstoff"=Lage in einer Installation unterzubringen.
+Der Schwerpunkt der Arbeit soll darin liegen, eine Ästhetik zu generieren, die eine von der Schadstoffbelastung abhängige Stimmung erzeugt.
+Gleichzeitig soll die Visualisierung dem Nutzer die konkreten und objektiven Messdaten präsentieren.  
 
-Die Schwierigkeit in diesem Vorhaben wird wahrscheinlich darin liegen die Subjektivität der stimmungserzeugenden Ästhetik mit der nüchternen und informativen Funktion der Datenvisualisierung in Einklang zu bringen.
+Die Schwierigkeit in diesem Vorhaben wird vermutlich darin liegen, die Subjektivität der stimmungserzeugenden Ästhetik mit der nüchternen und informativen Funktion der Datenvisualisierung in Einklang zu bringen.
 
-Technische Schwierigkeiten ergeben sich durch die 3 Dimensionalität der Visualisierung, sowie durch den Übergang von der chaotischen Bewegung der Kugeln in ihre Statische geografisch korrekte Position.
+Technische Schwierigkeiten ergeben sich durch die drei Dimensionalität der Visualisierung, sowie durch den Übergang von der chaotischen Bewegung der Kugeln in ihre statische geografisch korrekte Position.
 
-Ebenfalls als schwierig könnte sich die Modellierung einer passenden Interaktion des Nutzers mit der Visualisierung erweisen.
+Ebenfalls als schwierig, könnte sich die Modellierung der gewünschten Interaktion des Nutzers per Ultraschall-Sensor mit der Visualisierung erweisen.
 
 
 % % Listen, wenn überhaupt!, bitte ans Ende und nicht an den Anfang
